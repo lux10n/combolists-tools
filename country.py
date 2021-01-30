@@ -1,9 +1,8 @@
 #!/usr/bin/python3
 import os
 	from os import chdir,mkdir,listdir,system
-chdir('Domains')
-try:mkdir('inf_200')
-except:pass
+try:chdir('Domains')
+except:print('Nothing to do, Domains/ not found')
 def file_list():
 	system("ls |grep '.txt' > .flist")
 	l=open(".flist","r").read().split('\n')
