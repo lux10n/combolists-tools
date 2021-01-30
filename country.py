@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-from os import *
+import os
 
 #Default
 
-chdir('Domains')
+os.chdir('Domains')
 os.mkdir('inf')
-file_list=listdir('.')
+file_list=os.listdir('.')
 types=[]
 
 #get domain type
@@ -27,7 +27,7 @@ def gelLen(ml):
 
 def sort(ml):	#gmail.com.txt
 	if Dom(ml) in types:
-		system('mv '+ml+' '+mlForm+'/')
+		os.system('mv '+ml+' '+mlForm+'/')
 	else:
 		os.mkdir(Dom(ml))
 		types.append(ml)
