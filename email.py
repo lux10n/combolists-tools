@@ -17,6 +17,6 @@ def rewrite(file):
 try:
     rewrite(argv[1])
     sys("mv "+argv[1]+"tmp "+argv[1])
-except IndexError:
-    print("IndexError")
+except Exception as e:
+    print("Error : {}".format(str(e))
 
