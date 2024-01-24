@@ -3,7 +3,7 @@ from sys import argv
 from os import system
 import re
 script , combo_file , ex_file = argv
-cfile = open(combo_file)
+cfile = open(combo_file,'r',encoding='utf8',errors='ignore')
 system("./convert "+combo_file)
 xfile = open(ex_file, 'w')
 def rexmail(cfile):
