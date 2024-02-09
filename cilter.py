@@ -3,11 +3,12 @@
     Extract email from combos and sort by domain
     Coded by m1ck-t3sla
 """
+import os
 from os import system
 from sys import argv
 
 types=[]
-system("mkdir Domains/")
+os.mkdir("Domains")
 def getmail(combo):
     mail=combo.split(':')[0]
     return mail
